@@ -25,6 +25,3 @@ Chatbots são softwares agentes que conversam através de uma interface de chat,
 O usuário pode interagir com o chatbot digitando no final da conversa ou simplesmente por voz, dependendo do tipo de chatbot fornecido.
 
 Basicamente, criaremos uma lista de perguntas e respostas que serão usadas como início de nosso bot. A partir daí, utilizaremos alguns métodos para que todas as perguntas e respostas que o informamos, sejam analisadas, processadas e aprendidas ao longo do tempo.
-
-Basicamente, vamos criar uma lista de perguntas e respostas que serão usadas como aprendizado inicial do nosso Bot. A partir daí, utilizaremos alguns métodos para que todas as perguntas e respostas que vamos informando para ele, sejam analisadas, processadas e aprendidas conforme o tempo. 
-
