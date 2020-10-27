@@ -1,13 +1,19 @@
 from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
+from chatterbot.response_selection import get_random_response
 import spacy
+
 spacy.load('en')
 # --------------------------------------
 # Instantiate agent
+# BestMatch = selects response by best known match to statement
+# response_selection_method has 3 options:
+# get_first_response,get_most_frequent_response or get_random_response
 bot = ChatBot('chatbot_test',
               read_only=False,
-              logic_adapters=['chatterbot.logic.BestMatch'],
+              response_selection_method=get_random_response,
+              logic_adapters=[{'import_path': 'chatterbot.logic.BestMatch'}],
               storage_adapter='chatterbot.storage.SQLStorageAdapter',
               database='test1.sqlite3')
 
@@ -34,12 +40,15 @@ corpus_trainer.train('data/botprofile.yml', 'data/compliment.yml', 'data/compute
 # --------------------------------------
 # Conversation Loop
 while True:
-    question = input('Usuário: ')
-    answer = bot.get_response(question)
-    if float(answer.confidence) > 0.5:
-        print('chatbot_test: ', answer)
-        print(answer.confidence)
-    else:
-        print('chatbot_test: Ainda não sei responder essa pergunta')
-
+    try:
+        question = input('Usuário: ')
+        answer = bot.get_response(question)
+        if answer.confidence > 0.5:
+            print('chatbot_test: ', answer)
+        else:
+            print('chatbot_test: ', 'Ainda não sei responder essa frase')
+            print(answer.confidence)
+    # CONTROL+D to exit
+    except (KeyboardInterrupt, EOFError, SystemExit):
+        break
 # --------------------------------------
