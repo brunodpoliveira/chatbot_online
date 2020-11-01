@@ -2,6 +2,7 @@ from chatterbot import ChatBot
 from chatterbot.trainers import ListTrainer
 from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot.response_selection import get_random_response
+from flask import Flask, render_template, request
 import spacy
 
 spacy.load('en')
@@ -30,25 +31,51 @@ list_trainer = ListTrainer(bot)
 # Corpus Trainer
 corpus_trainer = ChatterBotCorpusTrainer(bot)
 
-corpus_trainer.train('data/botprofile.yml', 'data/compliment.yml', 'data/computers.yml', 'data/conversations.yml',
-                     'data/emotion.yml', 'data/food.yml', 'data/games.yml', 'data/gossip.yml', 'data/greetings.yml',
-                     'data/health.yml', 'data/history.yml', 'data/linguistic_knowledge.yml', 'data/literature.yml',
-                     'data/money.yml', 'data/movies.yml', 'data/politics.yml', 'data/proverbs.yml',
-                     'data/psychology.yml', 'data/science.yml', 'data/sports.yml', 'data/suggestions.yml',
-                     'data/trivia.yml', 'data/unilab.yml')
+# corpus_trainer.train('data/greetings.yml')
+
+
+corpus_trainer.train('data/botprofile.yml', 'data/compliment.yml', 'data/computers.yml', 'data/context_free_br.yml',
+                     'data/conversations.yml', 'data/emotion.yml', 'data/food.yml', 'data/games.yml',
+                     'data/gossip.yml', 'data/greetings.yml', 'data/health.yml', 'data/history.yml',
+                     'data/linguistic_knowledge.yml', 'data/literature.yml', 'data/money.yml', 'data/movies.yml',
+                     'data/politics.yml', 'data/proverbs.yml', 'data/psychology.yml', 'data/science.yml',
+                     'data/sports.yml', 'data/suggestions.yml', 'data/trivia.yml', 'data/unilab.yml')
+
 
 # --------------------------------------
 # Conversation Loop
-while True:
-    try:
-        question = input('Usuário: ')
-        answer = bot.get_response(question)
-        if answer.confidence > 0.5:
-            print('chatbot_test: ', answer)
-        else:
-            print('chatbot_test: ', 'Ainda não sei responder essa frase')
-            print(answer.confidence)
-    # CONTROL+D to exit
-    except (KeyboardInterrupt, EOFError, SystemExit):
-        break
+def conversation():
+    while True:
+        try:
+            question = input('Usuário: ')
+            answer = bot.get_response(question)
+            if answer.confidence > 0.5:
+                print('chatbot_test: ', answer)
+                print('confidence', answer.confidence)
+            else:
+                print('chatbot_test: ', 'Ainda não sei responder essa frase')
+                print('confidence', answer.confidence)
+        # CONTROL+D to exit
+        except (KeyboardInterrupt, EOFError, SystemExit):
+            break
+
+
 # --------------------------------------
+# GUI + website
+
+app = Flask(__name__)
+
+
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+
+@app.route("/get")
+def get_bot_response():
+    usertext = request.args.get('msg')
+    return str(bot.get_response(usertext))
+
+
+if __name__ == "__main__":
+    app.run()
