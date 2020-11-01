@@ -5,6 +5,7 @@
 A chatbot, running on python, free and open-source.
 
 Following tutorial available on https://www.simplifiedpython.net/python-chatbot and https://www.treinaweb.com.br/blog/criando-um-chatbot-com-python/
+
 Databases:https://github.com/brunodpoliveira/chatterbot-corpus , https://github.com/brunodpoliveira/replika-research
 
 A chatbot is a service,powered by rules and sometimes artificial intelligence,that you interact with via a chat interface.
@@ -20,6 +21,7 @@ Basically, we will create a list of questions and answers that will be used as t
 Um chatbot, rodando em python, gratuito e de código aberto.
 
 Seguindo tutorial disponível em https://www.simplifiedpython.net/python-chatbot e https://www.treinaweb.com.br/blog/criando-um-chatbot-com-python/
+
 Databases:https://github.com/brunodpoliveira/chatterbot-corpus , https://github.com/brunodpoliveira/replika-research
 
 Um chatbot é um serviço, movido por regras e às vezes inteligência artificial, com o qual você interage por meio de uma interface de chat.
