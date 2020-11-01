@@ -32,12 +32,12 @@ Modelado de acordo com as diretrizes de contribuição do OpenGovernment https:/
 
 Estou muito feliz que você esteja lendo isso, porque precisamos de desenvolvedores voluntários para ajudar este projeto a se concretizar.
 
-Se ainda não o fez, venha me encontrar no LinkedIn ([#LinkedIn] (https://www.linkedin.com/in/bruno-daniel-pinheiro-de-oliveira-b4024859/)).
+Se ainda não o fez, venha me encontrar no LinkedIn ([#LinkedIn](https://www.linkedin.com/in/bruno-daniel-pinheiro-de-oliveira-b4024859/)).
 
 Todo esse projeto consiste em código Python.
 
 ## Enviando alterações
-Envie uma [solicitação de pull do GitHub] (https://github.com/brunodpoliveira/twittter-sentiment-analysis/pull/new/main) com uma lista clara do que você fez. Siga nossas convenções de codificação (abaixo)
+Envie uma [solicitação de pull do GitHub](https://github.com/brunodpoliveira/twittter-sentiment-analysis/pull/new/main) com uma lista clara do que você fez. Siga nossas convenções de codificação (abaixo)
 
 Sempre escreva uma mensagem de log clara para seus commits.
 
