@@ -25,3 +25,31 @@ Start reading the code and you'll get the hang of it.
   
 Thanks,
 Bruno Daniel
+
+# Como contribuir
+
+Modelado de acordo com as diretrizes de contribuição do OpenGovernment https://github.com/opengovernment/opengovernment/blob/master/CONTRIBUTING.md
+
+Estou muito feliz que você esteja lendo isso, porque precisamos de desenvolvedores voluntários para ajudar este projeto a se concretizar.
+
+Se ainda não o fez, venha me encontrar no LinkedIn ([#LinkedIn] (https://www.linkedin.com/in/bruno-daniel-pinheiro-de-oliveira-b4024859/)).
+
+Todo esse projeto consiste em código Python.
+
+## Enviando alterações
+Envie uma [solicitação de pull do GitHub] (https://github.com/brunodpoliveira/twittter-sentiment-analysis/pull/new/main) com uma lista clara do que você fez. Siga nossas convenções de codificação (abaixo)
+
+Sempre escreva uma mensagem de log clara para seus commits.
+
+## Convenções de codificação
+
+Comece a ler o código e você pegará o jeito.
+
+  * Todos os dados devem ser armazenados na pasta /data
+  * Os nomes de arquivos, variáveis e classes são escritos em letras minúsculas, separados por sublinhado (word_bag, não wordbag ou WordBag)
+  * SEMPRE colocamos espaços após os itens da lista e parâmetros do método (`[1, 2, 3]`, não `[1,2,3]`), em torno dos operadores (`x + = 1`, não` x + = 1` ) e em torno de setas hash.
+  * As tarefas dentro do código são separadas por # ------------------------------------------ ------------------------------
+  * Este é um software com código aberto. Considere as pessoas que lerão seu código e faça com que ele tenha uma boa aparência para elas. É como dirigir um carro: talvez você adore fazer acelerar quando está sozinho, mas com os passageiros o objetivo é tornar a viagem o mais suave possível.
+  
+Obrigado,
+Bruno Daniel
