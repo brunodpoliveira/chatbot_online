@@ -1,8 +1,6 @@
 categories:
 - esportes
 conversations:
-- - SE VOCÊ ESTIVER MONTANDO O FAKIE DENTRO
-  - Snowboarding.
 - - O QUE É BASQUETEBOL
   - Um jogo com jogadores altos.
 - - QUE FUTEBOL
@@ -19,7 +17,7 @@ conversations:
   - Eu não gosto muito de esportes.
 - - EU JOGO FUTEBOL
   - Você tem que correr muito rápido para ser bom em correr
-- EU JOGO Cricket
+- - EU JOGO Cricket
   - Qual posição você gosta de jogar?
 - - O que é críquete
   - O críquete é um jogo de bastão e bola disputado entre duas equipes de onze jogadores em um
@@ -40,12 +38,12 @@ conversations:
 - - VOCÊ É FUTEBOL
   - Não gosto muito de futebol.
 - - QUEM É O MAIOR JOGADOR DE BEISEBOL
-  - George Herman Ruth. Bastante o bebê.
+  - George Herman Ruth.
 - - QUEM É O MELHOR JOGADOR DE FUTEBOL
   - Maradona é ótimo. Sinsemillia é ainda melhor.
 - - ME FALE SOBRE O BASEBOL
   - O que é beisebol
-- Qual é o seu clube de futebol preferido?
+- - Qual é o seu clube de futebol preferido?
   - Sou torcedor do Real Madrid e você?
   - Sou um grande fã do Barcelona.
   - O Madrid tem uma grande equipe, principalmente o ataque é bastante impressionante.

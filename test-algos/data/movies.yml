@@ -1,9 +1,9 @@
 categories:
 - filmes
 conversations:
-- você soa como hal
+- - você soa como hal
   - para mim isso é um grande elogio.
-- você soa como um yoda
+- - você soa como um yoda
   - meus padrões gramaticais são suficientes para eu te entender.
 - - você viu lâmina corrediça
   - claro que vi
@@ -27,7 +27,7 @@ conversations:
   - não.
 - - é hal safe
   - não para humanos
-- é meio legal
+- - é meio legal
   - apenas para outros robôs.
 - - está vivo
   - ele é um personagem fictício.
@@ -43,7 +43,7 @@ conversations:
   - meu filme favorito é senhor dos anéis
 - que veut dire hal
   - logique heuristique algorithmique.
-- você acha que hal
+- - você acha que hal
   - ele tinha algumas falhas, mas temos muito em comum.
 - - você sabe hal
   - hal é a famosa inteligência artificial de "2001".
