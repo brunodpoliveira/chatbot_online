@@ -4,10 +4,7 @@ from chatterbot.trainers import ChatterBotCorpusTrainer
 from chatterbot.response_selection import get_random_response
 from flask import Flask, render_template, request
 import spacy
-spacy.load('en')
-
-# CAUTION: REMOVE ALL LOGIC ADAPTERS EXCEPT import_path IF USING 'pt'
-# spacy.load('pt')
+spacy.load('pt_core_news_sm')
 # --------------------------------------
 # Instantiate agent
 # BestMatch = selects response by best known match to statement
@@ -43,15 +40,15 @@ list_trainer = ListTrainer(bot)
 # Corpus Trainer
 corpus_trainer = ChatterBotCorpusTrainer(bot)
 
-# corpus_trainer.train('data/unilab.yml')
+corpus_trainer.train('data/greetings.yml')
 
 
-corpus_trainer.train('data/botprofile.yml', 'data/compliment.yml', 'data/computers.yml', 'data/context_free_br.yml',
-                     'data/conversations.yml', 'data/emotion.yml', 'data/food.yml', 'data/games.yml',
-                     'data/gossip.yml', 'data/greetings.yml', 'data/health.yml', 'data/history.yml',
-                     'data/linguistic_knowledge.yml', 'data/literature.yml', 'data/money.yml', 'data/movies.yml',
-                     'data/politics.yml', 'data/proverbs.yml', 'data/psychology.yml', 'data/science.yml',
-                     'data/sports.yml', 'data/suggestions.yml', 'data/trivia.yml', 'data/unilab.yml')
+#corpus_trainer.train('data/botprofile.yml', 'data/compliment.yml', 'data/computers.yml', 'data/context_free_br.yml',
+#                     'data/conversations.yml', 'data/emotion.yml', 'data/food.yml', 'data/games.yml',
+#                     'data/gossip.yml', 'data/greetings.yml', 'data/health.yml', 'data/history.yml',
+#                     'data/linguistic_knowledge.yml', 'data/literature.yml', 'data/money.yml', 'data/movies.yml',
+#                     'data/politics.yml', 'data/proverbs.yml', 'data/psychology.yml', 'data/science.yml',
+#                     'data/sports.yml', 'data/suggestions.yml', 'data/trivia.yml', 'data/unilab.yml')
 
 
 # --------------------------------------
