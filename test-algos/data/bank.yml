@@ -1,0 +1,11 @@
+categories:
+- bank
+conversations:
+- - Como faço para tirar um empréstimo?
+  - resposta 1 para empréstimo
+- - Quero um empréstimo
+  - resposta 2 para empréstimo
+- - o que faço para abrir uma conta nesse banco?
+  - resposta 1 para abrir conta
+- - o que faço para fechar conta no banco?
+  - resposta 1 para fechar conta
